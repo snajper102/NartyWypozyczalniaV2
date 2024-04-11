@@ -4,11 +4,10 @@ using Avalonia.Markup.Xaml;
 
 namespace WypozyczalniaNartV2.Views;
 
-public partial class AddRentWindow : Window
+public partial class AddRPageView : Window
 {
-    public AddRentWindow()
+    public AddRPageView()
     {
         InitializeComponent();
-        AvaloniaXamlLoader.Load(this);
     }
 }

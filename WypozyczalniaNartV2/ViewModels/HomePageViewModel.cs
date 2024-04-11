@@ -1,6 +1,6 @@
 namespace WypozyczalniaNartV2.ViewModels;
 
-public class AddRentWindowViewModel
+public class HomePageViewModel : ViewModelBase
 {
     
 }

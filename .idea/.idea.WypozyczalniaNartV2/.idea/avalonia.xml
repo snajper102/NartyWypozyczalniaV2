@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="WypozyczalniaNartV2/App.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/ViewModels/HomePageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/ViewModels/UserControl1.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRenPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRentPage.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRentPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRentWindow.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddRenttPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddSkisPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddUPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddUserPage.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddUserPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddUserWindow.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/AddUserrPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/HomePageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/MainWindow.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/ShowAllPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/abcPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+        <entry key="WypozyczalniaNartV2/Views/cosPageView.axaml" value="WypozyczalniaNartV2/WypozyczalniaNartV2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
