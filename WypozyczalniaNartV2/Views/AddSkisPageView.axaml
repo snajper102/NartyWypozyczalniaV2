@@ -2,8 +2,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:WypozyczalniaNartV2.ViewModels"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="WypozyczalniaNartV2.Views.AddSkisPageView"
-        >
-   Dodawanie Nart
+        x:DataType="viewModels:AddSkisPageViewModel">    
+        
+        <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Dodawanie nowych nart</TextBlock>
+        
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj marke nart </TextBlock>
+                <TextBox Width="150" Text="{Binding Company}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj model nart </TextBlock>
+                <TextBox Width="150" Text="{Binding Model}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj długość </TextBlock>
+                <TextBox Width="150" Text="{Binding Lenght}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj szerokość </TextBlock>
+                <TextBox Width="150" Text="{Binding Width}"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Cena za dzień  </TextBlock>
+                <TextBox Width="150" Text="{Binding PricePerDay}"/>
+            
+
+      
+                <Button HorizontalAlignment="Center" Command="{Binding ButtonOnClickCommand}">Dodaj nowe narty</Button>
+        
+                <TextBlock HorizontalAlignment="Center" Text="{Binding TextBlockName, Mode=OneWay}"></TextBlock>
+        </StackPanel>
 </UserControl>

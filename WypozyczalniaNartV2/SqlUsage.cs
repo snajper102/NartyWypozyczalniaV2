@@ -31,16 +31,17 @@ public class SqlUsage
                         
                         
 
-                        Console.WriteLine($"ID: {User_Id}, Name: {Name}, Surname: {Surname}, PESEL: {PESEL}, City: {City}, Street: {Street}, ZipCode: {ZipCode}");
+                        
                     }
                 }
             }
+            connection.Close();
         }
     }
 
     
     
-    public static void AddRecordToDatabase(string name, string surname, string pesel, string city, string street, int zipCode)
+    public static void AddUserToDatabase(string name, string surname, string pesel, string city, string street, int zipCode)
     {
         // Łączymy się z bazą danych SQLite
         string connectionString = "Data Source=NartyWypo.db;Version=3;";
@@ -57,6 +58,28 @@ public class SqlUsage
                 insertCommand.Parameters.AddWithValue("@City", city);
                 insertCommand.Parameters.AddWithValue("@Street", street);
                 insertCommand.Parameters.AddWithValue("@ZipCode", zipCode);
+
+                insertCommand.ExecuteNonQuery();
+            }
+            Console.WriteLine(insertQuery);
+            connection.Close();
+        }
+    }
+    public static void AddSkisToDatabase(string company, string model, int lenght,int width, int pricePerDay)
+    {
+        string connectionString = "Data Source=NartyWypo.db;Version=3;";
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            connection.Open();
+            string insertQuery = "INSERT INTO Skis (Company, Model, Lenght, Width, PricePerDay) VALUES (@Company, @Model, @Lenght, @Width, @PricePerDay)";
+            using (SQLiteCommand insertCommand = new SQLiteCommand(insertQuery, connection))
+            {
+                insertCommand.Parameters.AddWithValue("@Company", company);
+                insertCommand.Parameters.AddWithValue("@Model", model);
+                insertCommand.Parameters.AddWithValue("@Lenght", lenght);
+                insertCommand.Parameters.AddWithValue("@Width", width);
+                insertCommand.Parameters.AddWithValue("@PricePerDay", pricePerDay);
+         
 
                 insertCommand.ExecuteNonQuery();
             }

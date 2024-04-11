@@ -11,13 +11,14 @@
         
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj imie </TextBlock>
         <TextBox Width="150" Text="{Binding Name}"/>
+        
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj nazwisko </TextBlock>
         <TextBox Width="150" Text="{Binding Surname}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj nr PESEL </TextBlock>
         <TextBox Width="150" Text="{Binding PESEL}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj miasto </TextBlock>
         <TextBox Width="150" Text="{Binding City}"/>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj ulice </TextBlock>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj ulice</TextBlock>
         <TextBox Width="150" Text="{Binding Street}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj kod pocztowy </TextBlock>
         <TextBox Width="150" Text="{Binding ZipCode}"/>

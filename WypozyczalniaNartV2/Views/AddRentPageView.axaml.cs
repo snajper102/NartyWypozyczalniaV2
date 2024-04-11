@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace WypozyczalniaNartV2.Views;
 
-public partial class AddRPageView : Window
+public partial class AddRentPageView : UserControl
 {
-    public AddRPageView()
+    public AddRentPageView()
     {
         InitializeComponent();
     }
