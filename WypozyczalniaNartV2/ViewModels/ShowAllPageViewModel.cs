@@ -1,9 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Data.SQLite;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
 namespace WypozyczalniaNartV2.ViewModels;
 
 public class ShowAllPageViewModel : ViewModelBase
@@ -29,13 +26,13 @@ public class ShowAllPageViewModel : ViewModelBase
                     while (reader.Read())
                     {
                         int id = Convert.ToInt32(reader["Id_Skis"]);
-                        string name = Convert.ToString(reader["Company"]);
-                        string brand = Convert.ToString(reader["Model"]);
+                        string? company = Convert.ToString(reader["Company"]);
+                        string? model = Convert.ToString(reader["Model"]);
                         int length = Convert.ToInt32(reader["Lenght"]);
                         int width = Convert.ToInt32(reader["Width"]);
                         int pricePerDay = Convert.ToInt32(reader["PricePerDay"]);
 
-                        Skiss.Add(new SkiModel(id, name, brand, length, width, pricePerDay));
+                        Skiss.Add(new SkiModel(id, company, model, length, width, pricePerDay));
                     }
                 }
             }

@@ -15,7 +15,7 @@
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj nazwisko </TextBlock>
         <TextBox Width="150" Text="{Binding Surname}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj nr PESEL </TextBlock>
-        <TextBox Width="150" Text="{Binding PESEL}"/>
+        <TextBox Width="150" Text="{Binding Pesel}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj miasto </TextBlock>
         <TextBox Width="150" Text="{Binding City}"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj ulice</TextBlock>

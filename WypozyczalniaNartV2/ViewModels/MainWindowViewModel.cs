@@ -1,20 +1,14 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Dynamic;
-using System.Reactive;
-using System.Reactive.Linq;
-using System.Windows.Input;
-using ReactiveUI;
 using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+
 
 
 namespace WypozyczalniaNartV2.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    [ObservableProperty] private ViewModelBase _CurrentPage = new HomePageViewModel();
+    [ObservableProperty] private ViewModelBase _currentPage = new HomePageViewModel();
 
     [ObservableProperty] private ListItemTemplate? _selectedListItem; 
     public ObservableCollection<ListItemTemplate> Items { get; } = new()
@@ -36,10 +30,7 @@ public partial class MainWindowViewModel : ViewModelBase
     
 #pragma warning disable CA1822 // Mark members as static
     
-public MainWindowViewModel()
-{
-    
-}
+
 
 #pragma warning restore CA1822 // Mark members as static
 }
