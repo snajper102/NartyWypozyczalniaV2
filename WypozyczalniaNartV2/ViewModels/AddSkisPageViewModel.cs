@@ -17,9 +17,15 @@ public partial class AddSkisPageViewModel : ViewModelBase
     [RelayCommand]
     private void ButtonOnClick()
     {
-        if(Company!=null&& Model!=null)
-            SqlUsage.AddSkisToDatabase(Company,Model,Lenght,Width,PricePerDay);
-        TextBlockName = "Narty zostaly poprawnie zapisane";
+        if (Company != null && Model != null && Lenght != null && Width != null && PricePerDay != null)
+        {
+            SqlUsage.AddSkisToDatabase(Company, Model, Lenght, Width, PricePerDay);
+            TextBlockName = "Narty zostaly poprawnie zapisane";
+        }
+        else
+        {
+            TextBlockName = "Nie wpisales poprawnych danych";
+        }
     }
     
 }

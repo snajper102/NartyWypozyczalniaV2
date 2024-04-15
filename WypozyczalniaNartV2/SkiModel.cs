@@ -8,12 +8,7 @@ public class SkiModel
     public int Length { get; set; }
     public int Width { get; set; }
     public int PricePerDay { get; set; }
-
-    public SkiModel(int idSkis, string? company)
-    {
-        Id_Skis = idSkis;
-        Company = company;
-    }
+    
    public  SkiModel(int idSkis, string? company, string? model, int length, int width, int pricePerDay)
     {
         Id_Skis = idSkis;

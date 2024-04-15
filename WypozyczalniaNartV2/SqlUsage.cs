@@ -86,5 +86,27 @@ public class SqlUsage
             Console.WriteLine(insertQuery);
             connection.Close();
         }
+    }public static void AddRentToDatabase(int id_user, int id_skis, int days, int price, string data_rent)
+    {
+        string connectionString = "Data Source=NartyWypo.db;Version=3;";
+        using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+        {
+            connection.Open();
+            string insertQuery = "INSERT INTO Rent (Id_User, Id_Skis, Days, Price, Data_Rent) VALUES (@Id_User, @Id_Skis, @Days, @Price, @Data_Rent)";
+            
+            using (SQLiteCommand insertCommand = new SQLiteCommand(insertQuery, connection))
+            {
+                insertCommand.Parameters.AddWithValue("@Id_User", id_user);
+                insertCommand.Parameters.AddWithValue("@Id_Skis", id_skis);
+                insertCommand.Parameters.AddWithValue("@Days", days);
+                insertCommand.Parameters.AddWithValue("@Price", price);
+                insertCommand.Parameters.AddWithValue("@Data_Rent", data_rent);
+         
+
+                insertCommand.ExecuteNonQuery();
+            }
+            Console.WriteLine(insertQuery);
+            connection.Close();
+        }
     }
 }

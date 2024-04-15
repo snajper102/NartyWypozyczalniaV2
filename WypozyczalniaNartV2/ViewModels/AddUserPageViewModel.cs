@@ -19,10 +19,16 @@ public partial class AddUserPageViewModel : ViewModelBase
     [RelayCommand]
     private void ButtonOnClick()
     {
-        
-            if (Name != null && Surname != null && Pesel != null && City != null && Street != null)
-                SqlUsage.AddUserToDatabase(Name, Surname, Pesel, City, Street, ZipCode);
+
+        if (Name != null && Surname != null && Pesel != null && City != null && Street != null)
+        {
+            SqlUsage.AddUserToDatabase(Name, Surname, Pesel, City, Street, ZipCode);
             TextBlockName = "Dane zostaly poprawnie zapisane";
+        }
+        else
+            {
+                TextBlockName = "Nie wpisales poprawnych danych";
+            }
     }
     
 }

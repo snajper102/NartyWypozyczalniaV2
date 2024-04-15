@@ -6,23 +6,20 @@ namespace WypozyczalniaNartV2.ViewModels;
 public class ShowAllPageViewModel : ViewModelBase
 {
     public ObservableCollection<SkiModel> Skiss { get; } = new ObservableCollection<SkiModel>();
+    public ObservableCollection<UserModel> Userr { get; } = new ObservableCollection<UserModel>();
 
     public ShowAllPageViewModel()
 
     {
-        // Łączenie z bazą danych SQLite
         using (var connection = new SQLiteConnection("Data Source=NartyWypo.db"))
         {
             connection.Open();
-
-            // Zapytanie SQL do pobrania danych z tabeli Skis
             string query = "SELECT * FROM Skis";
-
             using (var command = new SQLiteCommand(query, connection))
             {
                 using (var reader = command.ExecuteReader())
                 {
-                    // Iteracja przez wyniki zapytania i dodanie ich do listy Skiss
+                    
                     while (reader.Read())
                     {
                         int id = Convert.ToInt32(reader["Id_Skis"]);
@@ -36,19 +33,26 @@ public class ShowAllPageViewModel : ViewModelBase
                     }
                 }
             }
-            connection.Close();
+            string query1 = "SELECT * FROM User";
+                using (var command = new SQLiteCommand(query1, connection))
+                {
+                    using (var reader1 = command.ExecuteReader())
+                    {
+                        while (reader1.Read())
+                        {
+                            int id1 = Convert.ToInt32(reader1["User_Id"]);
+                            string? name = Convert.ToString(reader1["Name"]);
+                            string? surname = Convert.ToString(reader1["Surname"]);
+                            string? pe = Convert.ToString(reader1["PESEL"]);
+                            string? city = Convert.ToString(reader1["City"]);
+                            string? street = Convert.ToString(reader1["Street"]);
+                            int zipcode = Convert.ToInt32(reader1["ZipCode"]);
 
-
-
-
-            // var skis = new List<SkiModel>
-            // {
-            //    new SkiModel(1,"imie","ocs",15,15,15),
-
-
-            // };
-            //Skiss = new ObservableCollection<SkiModel>(skis);
-
+                            Userr.Add(new UserModel(id1, name, surname, pe, city, street, zipcode));
+                        }
+                    }
+                }
+                connection.Close();
         }
     }
 }

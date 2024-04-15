@@ -2,7 +2,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:WypozyczalniaNartV2.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="WypozyczalniaNartV2.Views.AddRentPageView">
-   Dodawanie wypozyczenia 
+             x:Class="WypozyczalniaNartV2.Views.AddRentPageView"
+             x:DataType="viewModels:AddRentPageViewModel">
+   
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Dodawanie nowego wypozyczenia</TextBlock>
+        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj id uztywknika</TextBlock>
+        <TextBox Width="150" Text="{Binding Id_User}"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj id nart </TextBlock>
+        <TextBox Width="150" Text="{Binding Id_Skis}"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj ilosc dni </TextBlock>
+        <TextBox Width="150" Text="{Binding Days}"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj cene </TextBlock>
+        <TextBox Width="150" Text="{Binding Price}"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top">Podaj date wypozyczenia</TextBlock>
+        <TextBox Width="150" Text="{Binding Date}"/>
+  
+
+      
+        <Button HorizontalAlignment="Center" Command="{Binding ButtonOnClickCommand}">Dodaj wypozyczenie</Button>
+        
+        <TextBlock HorizontalAlignment="Center" Text="{Binding TextBlockName, Mode=OneWay}"></TextBlock>
+    </StackPanel>
 </UserControl>

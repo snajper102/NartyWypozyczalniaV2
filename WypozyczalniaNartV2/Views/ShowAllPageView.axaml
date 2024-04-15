@@ -15,6 +15,11 @@
                   AutoGenerateColumns="True" IsReadOnly="True" GridLinesVisibility="All"
                   BorderThickness="1" BorderBrush="Gray">
             </DataGrid>
+        <DataGrid Margin="20" ItemsSource="{Binding Userr}"
+                  AutoGenerateColumns="True" IsReadOnly="True" GridLinesVisibility="All"
+                  BorderThickness="1" BorderBrush="Gray">
+            </DataGrid>
+        
     </StackPanel>
     
 </UserControl>
